@@ -1,6 +1,6 @@
-module github.com/projectdiscovery/nuclei/v2
+module github.com/ismilent/nuclei/v2
 
-go 1.17
+go 1.18
 
 require (
 	github.com/Knetic/govaluate v3.0.1-0.20171022003610-9aa49832a739+incompatible
@@ -28,7 +28,7 @@ require (
 	github.com/projectdiscovery/cryptoutil v1.0.0
 	github.com/projectdiscovery/fastdialer v0.0.16-0.20220609092737-7e3c7dcecf16
 	github.com/projectdiscovery/filekv v0.0.0-20210915124239-3467ef45dd08
-	github.com/projectdiscovery/fileutil v0.0.0-20220626180823-b24f0847f8e6
+	github.com/projectdiscovery/fileutil v0.0.0-20220705195237-01becc2a8963
 	github.com/projectdiscovery/goflags v0.0.8-0.20220610073650-5d31a8c159e3
 	github.com/projectdiscovery/gologger v1.1.4
 	github.com/projectdiscovery/hmap v0.0.2-0.20210917080408-0fd7bd286bfa
@@ -76,6 +76,7 @@ require (
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/openrdap/rdap v0.9.1-0.20191017185644-af93e7ef17b7
 	github.com/projectdiscovery/iputil v0.0.0-20220620153941-036d511e4097
+	github.com/projectdiscovery/nuclei/v2 v2.5.1
 	github.com/projectdiscovery/nvd v1.0.9-0.20220314070650-d4a214c1f87d
 	github.com/projectdiscovery/sliceutil v0.0.0-20220511171050-c7d9bc5cadd9
 	github.com/projectdiscovery/urlutil v0.0.0-20210525140139-b874f06ad921
@@ -175,3 +176,5 @@ require (
 	gopkg.in/alecthomas/kingpin.v2 v2.2.6 // indirect
 	gopkg.in/corvus-ch/zbase32.v1 v1.0.0 // indirect
 )
+
+replace github.com/projectdiscovery/nuclei/v2 => ../v2

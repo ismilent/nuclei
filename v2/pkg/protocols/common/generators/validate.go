@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/ismilent/nuclei/v2/pkg/types"
 	"github.com/projectdiscovery/folderutil"
-	"github.com/projectdiscovery/nuclei/v2/pkg/types"
 )
 
 // validate validates the payloads if any.

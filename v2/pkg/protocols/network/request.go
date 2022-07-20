@@ -13,17 +13,17 @@ import (
 
 	"github.com/pkg/errors"
 
+	"github.com/ismilent/nuclei/v2/pkg/operators"
+	"github.com/ismilent/nuclei/v2/pkg/output"
+	"github.com/ismilent/nuclei/v2/pkg/protocols"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/expressions"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/generators"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/helpers/eventcreator"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/helpers/responsehighlighter"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/interactsh"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/replacer"
+	templateTypes "github.com/ismilent/nuclei/v2/pkg/templates/types"
 	"github.com/projectdiscovery/gologger"
-	"github.com/projectdiscovery/nuclei/v2/pkg/operators"
-	"github.com/projectdiscovery/nuclei/v2/pkg/output"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/expressions"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/generators"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/helpers/eventcreator"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/helpers/responsehighlighter"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/interactsh"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/replacer"
-	templateTypes "github.com/projectdiscovery/nuclei/v2/pkg/templates/types"
 )
 
 var _ protocols.Request = &Request{}
@@ -190,14 +190,14 @@ func (request *Request) executeRequestWithPayloads(variables map[string]interfac
 	}
 	request.options.Progress.IncrementRequests()
 
-	if request.options.Options.Debug || request.options.Options.DebugRequests || request.options.Options.StoreResponse{
+	if request.options.Options.Debug || request.options.Options.DebugRequests || request.options.Options.StoreResponse {
 		requestBytes := []byte(reqBuilder.String())
 		msg := fmt.Sprintf("[%s] Dumped Network request for %s\n%s", request.options.TemplateID, actualAddress, hex.Dump(requestBytes))
 		if request.options.Options.Debug || request.options.Options.DebugRequests {
-		gologger.Info().Str("address", actualAddress).Msg(msg)
+			gologger.Info().Str("address", actualAddress).Msg(msg)
 		}
-		if request.options.Options.StoreResponse{
-		request.options.Output.WriteStoreDebugData(address, request.options.TemplateID, request.Type().String(), msg)
+		if request.options.Options.StoreResponse {
+			request.options.Output.WriteStoreDebugData(address, request.options.TemplateID, request.Type().String(), msg)
 		}
 		if request.options.Options.VerboseVerbose {
 			gologger.Print().Msgf("\nCompact HEX view:\n%s", hex.EncodeToString(requestBytes))
@@ -300,15 +300,15 @@ func (request *Request) executeRequestWithPayloads(variables map[string]interfac
 
 func dumpResponse(event *output.InternalWrappedEvent, request *Request, response string, actualAddress, address string) {
 	cliOptions := request.options.Options
-	if cliOptions.Debug || cliOptions.DebugResponse || cliOptions.StoreResponse{
+	if cliOptions.Debug || cliOptions.DebugResponse || cliOptions.StoreResponse {
 		requestBytes := []byte(response)
 		highlightedResponse := responsehighlighter.Highlight(event.OperatorsResult, hex.Dump(requestBytes), cliOptions.NoColor, true)
 		msg := fmt.Sprintf("[%s] Dumped Network response for %s\n\n", request.options.TemplateID, actualAddress)
 		if cliOptions.Debug || cliOptions.DebugResponse {
-		gologger.Debug().Msg(fmt.Sprintf("%s%s", msg, highlightedResponse))
+			gologger.Debug().Msg(fmt.Sprintf("%s%s", msg, highlightedResponse))
 		}
-		if cliOptions.StoreResponse{
-		request.options.Output.WriteStoreDebugData(address, request.options.TemplateID, request.Type().String(), fmt.Sprintf("%s%s", msg, hex.Dump(requestBytes)))
+		if cliOptions.StoreResponse {
+			request.options.Output.WriteStoreDebugData(address, request.options.TemplateID, request.Type().String(), fmt.Sprintf("%s%s", msg, hex.Dump(requestBytes)))
 		}
 		if cliOptions.VerboseVerbose {
 			displayCompactHexView(event, response, cliOptions.NoColor)

@@ -5,14 +5,14 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/ismilent/nuclei/v2/pkg/model"
+	"github.com/ismilent/nuclei/v2/pkg/operators"
+	"github.com/ismilent/nuclei/v2/pkg/output"
+	"github.com/ismilent/nuclei/v2/pkg/protocols"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/helpers/writer"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/http"
 	"github.com/projectdiscovery/cryptoutil"
 	"github.com/projectdiscovery/gologger"
-	"github.com/projectdiscovery/nuclei/v2/pkg/model"
-	"github.com/projectdiscovery/nuclei/v2/pkg/operators"
-	"github.com/projectdiscovery/nuclei/v2/pkg/output"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/helpers/writer"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/http"
 )
 
 // Cluster clusters a list of templates into a lesser number if possible based

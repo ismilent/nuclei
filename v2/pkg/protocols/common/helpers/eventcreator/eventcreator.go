@@ -1,9 +1,9 @@
 package eventcreator
 
 import (
-	"github.com/projectdiscovery/nuclei/v2/pkg/operators"
-	"github.com/projectdiscovery/nuclei/v2/pkg/output"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols"
+	"github.com/ismilent/nuclei/v2/pkg/operators"
+	"github.com/ismilent/nuclei/v2/pkg/output"
+	"github.com/ismilent/nuclei/v2/pkg/protocols"
 )
 
 // CreateEvent wraps the outputEvent with the result of the operators defined on the request

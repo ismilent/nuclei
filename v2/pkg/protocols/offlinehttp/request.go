@@ -10,12 +10,12 @@ import (
 	"github.com/pkg/errors"
 	"github.com/remeh/sizedwaitgroup"
 
+	"github.com/ismilent/nuclei/v2/pkg/output"
+	"github.com/ismilent/nuclei/v2/pkg/protocols"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/helpers/eventcreator"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/tostring"
+	templateTypes "github.com/ismilent/nuclei/v2/pkg/templates/types"
 	"github.com/projectdiscovery/gologger"
-	"github.com/projectdiscovery/nuclei/v2/pkg/output"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/helpers/eventcreator"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/tostring"
-	templateTypes "github.com/projectdiscovery/nuclei/v2/pkg/templates/types"
 )
 
 var _ protocols.Request = &Request{}

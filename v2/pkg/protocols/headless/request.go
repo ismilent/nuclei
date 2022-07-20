@@ -7,15 +7,15 @@ import (
 
 	"github.com/pkg/errors"
 
+	"github.com/ismilent/nuclei/v2/pkg/output"
+	"github.com/ismilent/nuclei/v2/pkg/protocols"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/generators"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/helpers/eventcreator"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/helpers/responsehighlighter"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/interactsh"
+	httpProtocol "github.com/ismilent/nuclei/v2/pkg/protocols/http"
+	templateTypes "github.com/ismilent/nuclei/v2/pkg/templates/types"
 	"github.com/projectdiscovery/gologger"
-	"github.com/projectdiscovery/nuclei/v2/pkg/output"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/generators"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/helpers/eventcreator"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/helpers/responsehighlighter"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/interactsh"
-	httpProtocol "github.com/projectdiscovery/nuclei/v2/pkg/protocols/http"
-	templateTypes "github.com/projectdiscovery/nuclei/v2/pkg/templates/types"
 )
 
 var _ protocols.Request = &Request{}

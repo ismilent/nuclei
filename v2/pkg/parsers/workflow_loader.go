@@ -1,10 +1,10 @@
 package parsers
 
 import (
+	"github.com/ismilent/nuclei/v2/pkg/catalog/loader/filter"
+	"github.com/ismilent/nuclei/v2/pkg/model"
+	"github.com/ismilent/nuclei/v2/pkg/protocols"
 	"github.com/projectdiscovery/gologger"
-	"github.com/projectdiscovery/nuclei/v2/pkg/catalog/loader/filter"
-	"github.com/projectdiscovery/nuclei/v2/pkg/model"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols"
 )
 
 type workflowLoader struct {

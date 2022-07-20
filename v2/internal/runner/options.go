@@ -12,14 +12,14 @@ import (
 
 	"github.com/go-playground/validator/v10"
 
+	"github.com/ismilent/nuclei/v2/pkg/catalog/config"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/protocolinit"
+	"github.com/ismilent/nuclei/v2/pkg/types"
 	"github.com/projectdiscovery/fileutil"
 	"github.com/projectdiscovery/goflags"
 	"github.com/projectdiscovery/gologger"
 	"github.com/projectdiscovery/gologger/formatter"
 	"github.com/projectdiscovery/gologger/levels"
-	"github.com/projectdiscovery/nuclei/v2/pkg/catalog/config"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/protocolinit"
-	"github.com/projectdiscovery/nuclei/v2/pkg/types"
 )
 
 func ConfigureOptions() error {

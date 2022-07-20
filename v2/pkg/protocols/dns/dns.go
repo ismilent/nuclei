@@ -8,11 +8,11 @@ import (
 
 	"github.com/weppos/publicsuffix-go/publicsuffix"
 
-	"github.com/projectdiscovery/nuclei/v2/pkg/operators"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/expressions"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/replacer"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/dns/dnsclientpool"
+	"github.com/ismilent/nuclei/v2/pkg/operators"
+	"github.com/ismilent/nuclei/v2/pkg/protocols"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/expressions"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/replacer"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/dns/dnsclientpool"
 	"github.com/projectdiscovery/retryabledns"
 )
 

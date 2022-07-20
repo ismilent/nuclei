@@ -6,16 +6,16 @@ import (
 	"github.com/pkg/errors"
 	"go.uber.org/multierr"
 
-	"github.com/projectdiscovery/nuclei/v2/pkg/model/types/severity"
-	"github.com/projectdiscovery/nuclei/v2/pkg/model/types/stringslice"
-	"github.com/projectdiscovery/nuclei/v2/pkg/output"
-	"github.com/projectdiscovery/nuclei/v2/pkg/reporting/dedupe"
-	"github.com/projectdiscovery/nuclei/v2/pkg/reporting/exporters/es"
-	"github.com/projectdiscovery/nuclei/v2/pkg/reporting/exporters/markdown"
-	"github.com/projectdiscovery/nuclei/v2/pkg/reporting/exporters/sarif"
-	"github.com/projectdiscovery/nuclei/v2/pkg/reporting/trackers/github"
-	"github.com/projectdiscovery/nuclei/v2/pkg/reporting/trackers/gitlab"
-	"github.com/projectdiscovery/nuclei/v2/pkg/reporting/trackers/jira"
+	"github.com/ismilent/nuclei/v2/pkg/model/types/severity"
+	"github.com/ismilent/nuclei/v2/pkg/model/types/stringslice"
+	"github.com/ismilent/nuclei/v2/pkg/output"
+	"github.com/ismilent/nuclei/v2/pkg/reporting/dedupe"
+	"github.com/ismilent/nuclei/v2/pkg/reporting/exporters/es"
+	"github.com/ismilent/nuclei/v2/pkg/reporting/exporters/markdown"
+	"github.com/ismilent/nuclei/v2/pkg/reporting/exporters/sarif"
+	"github.com/ismilent/nuclei/v2/pkg/reporting/trackers/github"
+	"github.com/ismilent/nuclei/v2/pkg/reporting/trackers/gitlab"
+	"github.com/ismilent/nuclei/v2/pkg/reporting/trackers/jira"
 	"github.com/projectdiscovery/retryablehttp-go"
 )
 
@@ -48,8 +48,8 @@ type Filter struct {
 }
 
 const (
-	reportingClientCreationErrorMessage  = "could not create reporting client"
-	exportClientCreationErrorMessage = "could not create exporting client"
+	reportingClientCreationErrorMessage = "could not create reporting client"
+	exportClientCreationErrorMessage    = "could not create exporting client"
 )
 
 // GetMatch returns true if a filter matches result event

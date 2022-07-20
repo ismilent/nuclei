@@ -4,8 +4,8 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/ismilent/nuclei/v2/pkg/catalog/config"
 	"github.com/mitchellh/go-homedir"
-	"github.com/projectdiscovery/nuclei/v2/pkg/catalog/config"
 )
 
 const (

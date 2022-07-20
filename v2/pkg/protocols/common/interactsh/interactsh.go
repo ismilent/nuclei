@@ -15,15 +15,15 @@ import (
 	"github.com/karlseguin/ccache"
 	"github.com/pkg/errors"
 
+	"github.com/ismilent/nuclei/v2/pkg/operators"
+	"github.com/ismilent/nuclei/v2/pkg/output"
+	"github.com/ismilent/nuclei/v2/pkg/progress"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/helpers/responsehighlighter"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/helpers/writer"
+	"github.com/ismilent/nuclei/v2/pkg/reporting"
 	"github.com/projectdiscovery/gologger"
 	"github.com/projectdiscovery/interactsh/pkg/client"
 	"github.com/projectdiscovery/interactsh/pkg/server"
-	"github.com/projectdiscovery/nuclei/v2/pkg/operators"
-	"github.com/projectdiscovery/nuclei/v2/pkg/output"
-	"github.com/projectdiscovery/nuclei/v2/pkg/progress"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/helpers/responsehighlighter"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/helpers/writer"
-	"github.com/projectdiscovery/nuclei/v2/pkg/reporting"
 	"github.com/projectdiscovery/retryablehttp-go"
 )
 
@@ -58,7 +58,7 @@ var (
 
 const (
 	stopAtFirstMatchAttribute = "stop-at-first-match"
-	templateIdAttribute = "template-id"
+	templateIdAttribute       = "template-id"
 )
 
 // Options contains configuration options for interactsh nuclei integration.

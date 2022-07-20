@@ -6,14 +6,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/projectdiscovery/nuclei/v2/pkg/catalog/config"
-	"github.com/projectdiscovery/nuclei/v2/pkg/utils"
+	"github.com/ismilent/nuclei/v2/pkg/catalog/config"
+	"github.com/ismilent/nuclei/v2/pkg/utils"
 
-	"github.com/projectdiscovery/nuclei/v2/pkg/model"
-	"github.com/projectdiscovery/nuclei/v2/pkg/output"
-	"github.com/projectdiscovery/nuclei/v2/pkg/types"
+	"github.com/ismilent/nuclei/v2/pkg/model"
+	"github.com/ismilent/nuclei/v2/pkg/output"
+	"github.com/ismilent/nuclei/v2/pkg/types"
 )
-
 
 // Summary returns a formatted built one line summary of the event
 func Summary(event *output.ResultEvent) string {

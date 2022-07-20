@@ -5,10 +5,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/projectdiscovery/nuclei/v2/pkg/model"
-	"github.com/projectdiscovery/nuclei/v2/pkg/model/types/severity"
-	"github.com/projectdiscovery/nuclei/v2/pkg/output"
-	"github.com/projectdiscovery/nuclei/v2/pkg/testutils"
+	"github.com/ismilent/nuclei/v2/pkg/model"
+	"github.com/ismilent/nuclei/v2/pkg/model/types/severity"
+	"github.com/ismilent/nuclei/v2/pkg/output"
+	"github.com/ismilent/nuclei/v2/pkg/testutils"
 )
 
 func TestSSLProtocol(t *testing.T) {

@@ -11,11 +11,11 @@ import (
 
 	"github.com/pkg/errors"
 
+	"github.com/ismilent/nuclei/v2/pkg/types"
 	"github.com/projectdiscovery/filekv"
 	"github.com/projectdiscovery/fileutil"
 	"github.com/projectdiscovery/gologger"
 	"github.com/projectdiscovery/hmap/store/hybrid"
-	"github.com/projectdiscovery/nuclei/v2/pkg/types"
 )
 
 // Input is a hmap/filekv backed nuclei Input provider

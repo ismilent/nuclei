@@ -8,11 +8,11 @@ import (
 
 	"github.com/andygrunwald/go-jira"
 
+	"github.com/ismilent/nuclei/v2/pkg/catalog/config"
+	"github.com/ismilent/nuclei/v2/pkg/output"
+	"github.com/ismilent/nuclei/v2/pkg/reporting/format"
+	"github.com/ismilent/nuclei/v2/pkg/types"
 	"github.com/projectdiscovery/gologger"
-	"github.com/projectdiscovery/nuclei/v2/pkg/catalog/config"
-	"github.com/projectdiscovery/nuclei/v2/pkg/output"
-	"github.com/projectdiscovery/nuclei/v2/pkg/reporting/format"
-	"github.com/projectdiscovery/nuclei/v2/pkg/types"
 	"github.com/projectdiscovery/retryablehttp-go"
 )
 
@@ -45,7 +45,6 @@ type Options struct {
 	SeverityAsLabel bool `yaml:"severity-as-label"`
 	HttpClient      *retryablehttp.Client
 }
-
 
 // New creates a new issue tracker integration client based on options.
 func New(options *Options) (*Integration, error) {

@@ -7,17 +7,17 @@ import (
 	"path/filepath"
 	"time"
 
+	"github.com/ismilent/nuclei/v2/internal/runner"
+	"github.com/ismilent/nuclei/v2/pkg/catalog/config"
+	"github.com/ismilent/nuclei/v2/pkg/model/types/severity"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/http"
+	templateTypes "github.com/ismilent/nuclei/v2/pkg/templates/types"
+	"github.com/ismilent/nuclei/v2/pkg/types"
+	"github.com/ismilent/nuclei/v2/pkg/utils/monitor"
 	"github.com/projectdiscovery/fileutil"
 	"github.com/projectdiscovery/goflags"
 	"github.com/projectdiscovery/gologger"
 	"github.com/projectdiscovery/interactsh/pkg/client"
-	"github.com/projectdiscovery/nuclei/v2/internal/runner"
-	"github.com/projectdiscovery/nuclei/v2/pkg/catalog/config"
-	"github.com/projectdiscovery/nuclei/v2/pkg/model/types/severity"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/http"
-	templateTypes "github.com/projectdiscovery/nuclei/v2/pkg/templates/types"
-	"github.com/projectdiscovery/nuclei/v2/pkg/types"
-	"github.com/projectdiscovery/nuclei/v2/pkg/utils/monitor"
 )
 
 var (
@@ -98,7 +98,7 @@ on extensive configurability, massive extensibility and ease of use.`)
 
 	flagSet.CreateGroup("templates", "Templates",
 		flagSet.BoolVarP(&options.NewTemplates, "new-templates", "nt", false, "run only new templates added in latest nuclei-templates release"),
-		flagSet.CommaSeparatedStringSliceVarP(&options.NewTemplatesWithVersion,"new-templates-version", "ntv", []string{}, "run new templates added in specific version"),
+		flagSet.CommaSeparatedStringSliceVarP(&options.NewTemplatesWithVersion, "new-templates-version", "ntv", []string{}, "run new templates added in specific version"),
 		flagSet.BoolVarP(&options.AutomaticScan, "automatic-scan", "as", false, "automatic web scan using wappalyzer technology detection to tags mapping"),
 		flagSet.FileNormalizedOriginalStringSliceVarP(&options.Templates, "templates", "t", []string{}, "list of template or template directory to run (comma-separated, file)"),
 		flagSet.FileNormalizedOriginalStringSliceVarP(&options.TemplateURLs, "template-url", "tu", []string{}, "list of template urls to run (comma-separated, file)"),

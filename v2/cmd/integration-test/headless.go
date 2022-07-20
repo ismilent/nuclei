@@ -6,7 +6,7 @@ import (
 
 	"github.com/julienschmidt/httprouter"
 
-	"github.com/projectdiscovery/nuclei/v2/pkg/testutils"
+	"github.com/ismilent/nuclei/v2/pkg/testutils"
 )
 
 var headlessTestcases = map[string]testutils.TestCase{

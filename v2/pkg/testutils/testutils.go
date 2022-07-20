@@ -5,15 +5,15 @@ import (
 
 	"github.com/logrusorgru/aurora"
 
+	"github.com/ismilent/nuclei/v2/pkg/catalog"
+	"github.com/ismilent/nuclei/v2/pkg/model"
+	"github.com/ismilent/nuclei/v2/pkg/model/types/severity"
+	"github.com/ismilent/nuclei/v2/pkg/output"
+	"github.com/ismilent/nuclei/v2/pkg/progress"
+	"github.com/ismilent/nuclei/v2/pkg/protocols"
+	"github.com/ismilent/nuclei/v2/pkg/protocols/common/protocolinit"
+	"github.com/ismilent/nuclei/v2/pkg/types"
 	"github.com/projectdiscovery/gologger/levels"
-	"github.com/projectdiscovery/nuclei/v2/pkg/catalog"
-	"github.com/projectdiscovery/nuclei/v2/pkg/model"
-	"github.com/projectdiscovery/nuclei/v2/pkg/model/types/severity"
-	"github.com/projectdiscovery/nuclei/v2/pkg/output"
-	"github.com/projectdiscovery/nuclei/v2/pkg/progress"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols"
-	"github.com/projectdiscovery/nuclei/v2/pkg/protocols/common/protocolinit"
-	"github.com/projectdiscovery/nuclei/v2/pkg/types"
 )
 
 // Init initializes the protocols and their configurations

@@ -4,11 +4,11 @@ import (
 	"github.com/remeh/sizedwaitgroup"
 	"go.uber.org/atomic"
 
+	"github.com/ismilent/nuclei/v2/pkg/output"
+	"github.com/ismilent/nuclei/v2/pkg/templates"
+	"github.com/ismilent/nuclei/v2/pkg/templates/types"
+	generalTypes "github.com/ismilent/nuclei/v2/pkg/types"
 	"github.com/projectdiscovery/gologger"
-	"github.com/projectdiscovery/nuclei/v2/pkg/output"
-	"github.com/projectdiscovery/nuclei/v2/pkg/templates"
-	"github.com/projectdiscovery/nuclei/v2/pkg/templates/types"
-	generalTypes "github.com/projectdiscovery/nuclei/v2/pkg/types"
 )
 
 // Execute takes a list of templates/workflows that have been compiled

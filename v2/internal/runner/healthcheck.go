@@ -7,11 +7,11 @@ import (
 	"runtime"
 	"strings"
 
+	"github.com/ismilent/nuclei/v2/pkg/catalog/config"
+	"github.com/ismilent/nuclei/v2/pkg/types"
 	"github.com/mitchellh/go-homedir"
 	"github.com/projectdiscovery/fileutil"
 	"github.com/projectdiscovery/goflags"
-	"github.com/projectdiscovery/nuclei/v2/pkg/catalog/config"
-	"github.com/projectdiscovery/nuclei/v2/pkg/types"
 )
 
 // DoHealthCheck performs self-diagnostic checks

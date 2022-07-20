@@ -4,9 +4,9 @@ import (
 	"github.com/remeh/sizedwaitgroup"
 	"go.uber.org/atomic"
 
+	"github.com/ismilent/nuclei/v2/pkg/output"
+	"github.com/ismilent/nuclei/v2/pkg/workflows"
 	"github.com/projectdiscovery/gologger"
-	"github.com/projectdiscovery/nuclei/v2/pkg/output"
-	"github.com/projectdiscovery/nuclei/v2/pkg/workflows"
 )
 
 const workflowExecutionErrorMessageTemplate = "[%s] Could not execute workflow step: %s\n"
